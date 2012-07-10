@@ -2,46 +2,38 @@ namespace Dominio
 {
     public class ContaEspecial : ContaCorrente
     {
-        private double limite;
+        public double Limite { get; set; }
+
         public ContaEspecial()
-            : base()
         {
             Limite = 0;
         }
-        public ContaEspecial(string n, double s, double l)
-            : base(n, s)
+
+        public ContaEspecial(string nome, double saldo, double limite)
+            : base(nome, saldo)
         {
-            Limite = l;
+            Limite = limite;
         }
-        public double Limite
-        {
-            get { return limite; }
-            set { limite = value; }
-        }
+
         public override double Saldo()
         {
-            return Saldocliente + Limite;
+            return SaldoCliente + Limite;
         }
 
-        public override void debito(double valor)
+        public override void Debito(double valor, out string mensagem)
         {
-            if (Saldocliente + Limite >= valor)
+            if (SaldoCliente + Limite >= valor)
             {
-                Saldocliente = Saldocliente - valor;
-
+                SaldoCliente = SaldoCliente - valor;
+                mensagem = "Debito efetuado com sucesso";
             }
             else
-            {
-                string erro = "Saldo Insuficiente";
-                MessageBox.Show(erro, "ERRO");
-            }
-
-
+                mensagem = "Saldo insuficiente";
         }
 
         public override string ToString()
         {
-            return base.ToString() + "\nLimite: " + Limite;
+            return string.Format("{0} \nLimite: {1}", base.ToString(), Limite);
         }
     }
 }

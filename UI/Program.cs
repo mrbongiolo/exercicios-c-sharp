@@ -59,7 +59,7 @@ namespace UI
                                         Console.WriteLine("TABAJARA HOME BANK ©\n\n");
                                         Console.WriteLine("Entre com o valor: ");
                                         valor = double.Parse(Console.ReadLine());
-                                        c1.debito(valor);
+                                        c1.Debito(valor);
                                         Console.WriteLine("\nAguarde !!!");
                                         string saida2 = "";
                                         foreach (Conta atual in vetor)
@@ -76,7 +76,7 @@ namespace UI
                                         Console.WriteLine("TABAJARA HOME BANK ©\n\n");
                                         Console.WriteLine("Entre com o valor: ");
                                         valor = double.Parse(Console.ReadLine());
-                                        c2.debito(valor);
+                                        c2.Debito(valor);
                                         Console.WriteLine("\nAguarde !!!");
                                         string saida2 = "";
                                         foreach (Conta atual in vetor)
@@ -109,7 +109,7 @@ namespace UI
                                         Console.WriteLine("TABAJARA HOME BANK ©\n\n");
                                         Console.WriteLine("Entre com o valor: ");
                                         valor = double.Parse(Console.ReadLine());
-                                        e1.debito(valor);
+                                        e1.Debito(valor);
                                         Console.WriteLine("\nAguarde !!!");
                                         string saida2 = "";
                                         foreach (Conta atual in vetor)
@@ -126,7 +126,7 @@ namespace UI
                                         Console.WriteLine("TABAJARA HOME BANK ©\n\n");
                                         Console.WriteLine("Entre com o valor: ");
                                         valor = double.Parse(Console.ReadLine());
-                                        e2.debito(valor);
+                                        e2.Debito(valor);
                                         Console.WriteLine("\nAguarde !!!");
                                         string saida2 = "";
                                         foreach (Conta atual in vetor)
@@ -169,7 +169,7 @@ namespace UI
                                         Console.WriteLine("TABAJARA HOME BANK ©\n\n");
                                         Console.WriteLine("Entre com o valor: ");
                                         valor = double.Parse(Console.ReadLine());
-                                        c1.credito(valor);
+                                        c1.Credito(valor);
                                         Console.WriteLine("\nAguarde !!!");
                                         string saida3 = "";
                                         foreach (Conta atual in vetor)
@@ -186,7 +186,7 @@ namespace UI
                                         Console.WriteLine("TABAJARA HOME BANK ©\n\n");
                                         Console.WriteLine("Entre com o valor: ");
                                         valor = double.Parse(Console.ReadLine());
-                                        c2.credito(valor);
+                                        c2.Credito(valor);
                                         Console.WriteLine("\nAguarde !!!");
                                         string saida3 = "";
                                         foreach (Conta atual in vetor)
@@ -224,7 +224,7 @@ namespace UI
                                         Console.WriteLine("TABAJARA HOME BANK ©\n\n");
                                         Console.WriteLine("Entre com o valor: ");
                                         valor = double.Parse(Console.ReadLine());
-                                        e1.credito(valor);
+                                        e1.Credito(valor);
                                         Console.WriteLine("\nAguarde !!!");
                                         string saida3 = "";
                                         foreach (Conta atual in vetor)
@@ -241,7 +241,7 @@ namespace UI
                                         Console.WriteLine("TABAJARA HOME BANK ©\n\n");
                                         Console.WriteLine("Entre com o valor: ");
                                         valor = double.Parse(Console.ReadLine());
-                                        e2.credito(valor);
+                                        e2.Credito(valor);
                                         Console.WriteLine("\nAguarde !!!");
                                         string saida3 = "";
                                         foreach (Conta atual in vetor)

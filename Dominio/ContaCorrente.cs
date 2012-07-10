@@ -2,58 +2,44 @@ namespace Dominio
 {
     public class ContaCorrente : Conta
     {
-        private string nome;
-        private double saldocliente;
+        public string Nome { get; set; }
+        public double SaldoCliente { get; set; }
 
-        public ContaCorrente()
+        public ContaCorrente(string nome, double saldo)
         {
-            Nome = "";
-            Saldocliente = 0;
+            Nome = nome;
+            SaldoCliente = saldo;
         }
 
-        public ContaCorrente(string n, double s)
+        protected ContaCorrente()
         {
-            Nome = n;
-            Saldocliente = s;
         }
 
-        public string Nome
+        public override void Credito(double valor, out string mensagem)
         {
-            get { return nome; }
-            set { nome = value; }
-        }
-        public double Saldocliente
-        {
-            get { return saldocliente; }
-            set { saldocliente = value; }
+            SaldoCliente = SaldoCliente + valor;
+            mensagem = "Credito efetuado com sucesso";
         }
 
-
-        public void credito(double valor)
+        public override void Debito(double valor, out string mensagem)
         {
-            Saldocliente = Saldocliente + valor;
-        }
-        public virtual void debito(double valor)
-        {
-            if (Saldocliente >= valor)
+            if (SaldoCliente >= valor)
             {
-                Saldocliente = Saldocliente - valor;
-
+                SaldoCliente = SaldoCliente - valor;
+                mensagem = "Debito efetuado com sucesso";
             }
             else
-            {
-                string erro = "Saldo Insuficiente";
-                //MessageBox.Show(erro, "ERRO");
-            }
+                mensagem = "Saldo insuficiente";
         }
+
         public override double Saldo()
         {
-            return Saldocliente;
+            return SaldoCliente;
         }
 
         public override string ToString()
         {
-            return "\nNome: " + Nome + "\n\nSaldo: " + Saldocliente;
+            return string.Format("Cliente: {0} \n Saldo: {1}", Nome, SaldoCliente);
         }
     }
 }
