@@ -1,16 +1,11 @@
-namespace Dominio
+namespace Dominio.Bancario
 {
     public class ContaEspecial : ContaCorrente
     {
-        public double Limite { get; set; }
-
-        public ContaEspecial()
-        {
-            Limite = 0;
-        }
-
-        public ContaEspecial(string nome, double saldo, double limite)
-            : base(nome, saldo)
+        private double Limite { get; set; }
+        
+        public ContaEspecial(int numero, string nome, double saldo, double limite)
+            : base(numero, nome, saldo)
         {
             Limite = limite;
         }
@@ -31,9 +26,9 @@ namespace Dominio
                 mensagem = "Saldo insuficiente";
         }
 
-        public override string ToString()
+        public override string Extrato()
         {
-            return string.Format("{0} \nLimite: {1}", base.ToString(), Limite);
+            return string.Format("{0} - Limite: {1} - Saldo Total: {2}", base.Extrato(), Limite, Saldo());
         }
     }
 }

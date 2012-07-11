@@ -8,8 +8,8 @@
     <ProjectGuid>{E87E2FFF-1503-4D92-9800-8D060495057C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Dominio</RootNamespace>
-    <AssemblyName>Dominio</AssemblyName>
+    <RootNamespace>Dominio.Bancario</RootNamespace>
+    <AssemblyName>Dominio.Bancario</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,9 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Banco.cs" />
     <Compile Include="ContaCorrente.cs" />
     <Compile Include="ContaEspecial.cs" />
-    <Compile Include="Conta.cs" />
+    <Compile Include="IConta.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Seguros.cs" />
   </ItemGroup>
